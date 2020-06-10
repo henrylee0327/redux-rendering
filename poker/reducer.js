@@ -37,7 +37,7 @@ const reducer = (state = initialState, action) => {
         };
     
         if(type === 'card2') {
-            state.splice(1, 2, newCard())
+            state.splice(1, 1, newCard())
         };
 
 
