@@ -8,6 +8,14 @@ const reducer = (state = initialState, action) => {
     const { type } = action;
 
     // Add a Name Tag
+    console.log(action)
 
+    // const theName = 
+
+    if (type === 'addNameTag') {
+        state.push(action.name)
+    };
+
+    console.log("=========");
     return state;
 }

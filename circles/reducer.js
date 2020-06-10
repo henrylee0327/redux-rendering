@@ -28,7 +28,7 @@ const reducer = (state = initialState, action) => {
     if (type === 'randomCircle') {
         state.push(generateRandomCircle())
     }
-    console.log(state)
+    console.log(action)
     return state;
 }
 
