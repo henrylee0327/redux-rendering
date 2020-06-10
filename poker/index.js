@@ -7,3 +7,17 @@ dispatch({ type: null }); // Here we're making a call to dispatch() - this trigg
 
 // Write DOM event listeners here, make them dispatch actions to the Redux store 
 
+const btnEl1 = document.getElementById('card1Button')
+const btnEl2 = document.getElementById('card2Button')
+
+btnEl1.addEventListener("click", () => {
+    dispatch({
+        type: "card1"
+    })
+})
+
+btnEl2.addEventListener("click", () => {
+    dispatch({
+        type: "card2"
+    })  
+})
