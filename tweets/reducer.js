@@ -42,11 +42,33 @@ const reducer = (state = initialState, action) => {
     // Handle actions here - make sure you don't mutate the state!
     const { type } = action;
 
+    
     // ACTION 1 - Sort by # likes
+    if (type === 'likes') {
+        state.sort((a, b) => {
+            if (a.likes < b.likes) return 1
+            else if (a.likes > b.likes) return -1
+            else return 0
+        })
+    };
 
     // ACTION 2 - Sort by # retweets
+    if(type === 'retweets') {
+        state.sort((a, b) => {
+            if (a.retweets < b.retweets) return 1
+            else if (a.retweets > b.retweets) return -1
+            else return 0
+        })
+    };
 
     // ACTION 3 - Sort by # replies
-    
+    if(type === 'replies') {
+        state.sort((a, b) => {
+            if (a.replies < b.replies) return 1
+            else if (a. replies > b.replies) return -1
+            else return 0
+        })
+    };    
+    console.log(state);
     return state;
 }
